@@ -4,7 +4,7 @@ plugins {
 }
 
 android {
-    namespace 'com.example.plotlinetooltip'
+    namespace 'com.example.tool_tip'
     compileSdk 33
 
     defaultConfig {

@@ -1,4 +1,4 @@
-package com.example.plotlinetooltip
+package com.example.tool_tip
 
 import org.junit.Test
 
