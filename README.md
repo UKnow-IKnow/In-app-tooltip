@@ -4,7 +4,7 @@
 ![Kotlin](https://img.shields.io/badge/Kotlin-0095D5?&style=for-the-badge&logo=kotlin&logoColor=white)
 
 ## Features:
-- Ability to set the target element, position (top/right/bottom/left), style and text ofthe tooltip.
+- Ability to set the target element, position (top/start/bottom/end), style and text ofthe tooltip.
 - The tooltip works seamlessly for buttons at any location of the mobile screen preview
 - Ability to include an image inside tooltip.
 
