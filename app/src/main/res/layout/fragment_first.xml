@@ -46,7 +46,7 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/tooltip_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -59,7 +59,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textInputLayout" />
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/tooltip_et"
         android:layout_width="match_parent"
         android:layout_height="45dp"
         android:layout_marginStart="16dp"
@@ -70,10 +70,10 @@
         android:paddingStart="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+        app:layout_constraintTop_toBottomOf="@+id/tooltip_tv" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/size_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -83,10 +83,10 @@
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText" />
+        app:layout_constraintTop_toBottomOf="@+id/tooltip_et" />
 
     <EditText
-        android:id="@+id/edtext"
+        android:id="@+id/size_et"
         android:layout_width="130dp"
         android:layout_height="45dp"
         android:layout_marginStart="16dp"
@@ -95,34 +95,34 @@
         android:hint="0"
         android:paddingStart="16dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+        app:layout_constraintTop_toBottomOf="@+id/size_tv" />
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/padding_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Padding"
         android:textColor="@color/black"
         android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/textView3"
+        app:layout_constraintBottom_toBottomOf="@+id/size_tv"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textView3"
-        app:layout_constraintTop_toTopOf="@+id/textView3" />
+        app:layout_constraintStart_toEndOf="@+id/size_tv"
+        app:layout_constraintTop_toTopOf="@+id/size_tv" />
 
     <EditText
-        android:id="@+id/edtext1"
+        android:id="@+id/padding_et"
         android:layout_width="130dp"
         android:layout_height="45dp"
         android:layout_marginTop="8dp"
         android:background="@drawable/custom_input"
         android:hint="0"
         android:paddingStart="16dp"
-        app:layout_constraintStart_toStartOf="@+id/textView4"
-        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+        app:layout_constraintStart_toStartOf="@+id/padding_tv"
+        app:layout_constraintTop_toBottomOf="@+id/padding_tv" />
 
     <TextView
-        android:id="@+id/textcolor"
+        android:id="@+id/color_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -132,10 +132,10 @@
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edtext" />
+        app:layout_constraintTop_toBottomOf="@+id/size_et" />
 
     <EditText
-        android:id="@+id/editTextcolor"
+        android:id="@+id/color_et"
         android:layout_width="match_parent"
         android:layout_height="45dp"
         android:layout_marginStart="16dp"
@@ -146,10 +146,10 @@
         android:paddingStart="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textcolor" />
+        app:layout_constraintTop_toBottomOf="@+id/color_tv" />
 
     <TextView
-        android:id="@+id/bgcolor"
+        android:id="@+id/bgColor_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -159,10 +159,10 @@
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextcolor" />
+        app:layout_constraintTop_toBottomOf="@+id/color_et" />
 
     <EditText
-        android:id="@+id/bgTextcolor"
+        android:id="@+id/bgColor_et"
         android:layout_width="match_parent"
         android:layout_height="45dp"
         android:layout_marginStart="16dp"
@@ -173,10 +173,10 @@
         android:paddingStart="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/bgcolor" />
+        app:layout_constraintTop_toBottomOf="@+id/bgColor_tv" />
 
     <TextView
-        android:id="@+id/cornerradius"
+        android:id="@+id/radius_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -186,21 +186,21 @@
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/bgTextcolor" />
+        app:layout_constraintTop_toBottomOf="@+id/bgColor_et" />
 
     <EditText
-        android:id="@+id/cornered"
+        android:id="@+id/radius_et"
         android:layout_width="130dp"
         android:layout_height="45dp"
         android:layout_marginTop="10dp"
         android:background="@drawable/custom_input"
         android:hint="0"
         android:paddingStart="16dp"
-        app:layout_constraintStart_toStartOf="@+id/cornerradius"
-        app:layout_constraintTop_toBottomOf="@+id/cornerradius" />
+        app:layout_constraintStart_toStartOf="@+id/radius_tv"
+        app:layout_constraintTop_toBottomOf="@+id/radius_tv" />
 
     <TextView
-        android:id="@+id/tooltipwidth"
+        android:id="@+id/ttWidth_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
@@ -208,24 +208,24 @@
         android:textColor="@color/black"
         android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/cornerradius"
+        app:layout_constraintBottom_toBottomOf="@+id/radius_tv"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/cornerradius"
-        app:layout_constraintTop_toTopOf="@+id/cornerradius" />
+        app:layout_constraintStart_toEndOf="@+id/radius_tv"
+        app:layout_constraintTop_toTopOf="@+id/radius_tv" />
 
     <EditText
-        android:id="@+id/tooltipw"
+        android:id="@+id/ttWidth_et"
         android:layout_width="130dp"
         android:layout_height="45dp"
         android:layout_marginTop="10dp"
         android:background="@drawable/custom_input"
         android:hint="0"
         android:paddingStart="16dp"
-        app:layout_constraintStart_toStartOf="@+id/tooltipwidth"
-        app:layout_constraintTop_toBottomOf="@+id/tooltipwidth" />
+        app:layout_constraintStart_toStartOf="@+id/ttWidth_tv"
+        app:layout_constraintTop_toBottomOf="@+id/ttWidth_tv" />
 
     <TextView
-        android:id="@+id/arrow"
+        android:id="@+id/arrWidth_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
@@ -233,46 +233,46 @@
         android:textColor="@color/black"
         android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/cornered"
-        app:layout_constraintTop_toBottomOf="@+id/cornered" />
+        app:layout_constraintStart_toStartOf="@+id/radius_et"
+        app:layout_constraintTop_toBottomOf="@+id/radius_et" />
 
     <EditText
-        android:id="@+id/arrowed"
+        android:id="@+id/arrWidth_et"
         android:layout_width="130dp"
         android:layout_height="45dp"
         android:layout_marginTop="10dp"
         android:background="@drawable/custom_input"
         android:hint="0"
         android:paddingStart="16dp"
-        app:layout_constraintStart_toStartOf="@+id/arrow"
-        app:layout_constraintTop_toBottomOf="@+id/arrow" />
+        app:layout_constraintStart_toStartOf="@+id/arrWidth_tv"
+        app:layout_constraintTop_toBottomOf="@+id/arrWidth_tv" />
 
     <TextView
-        android:id="@+id/arrowh"
+        android:id="@+id/arrHeight_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Arrow Height"
         android:textColor="@color/black"
         android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/arrow"
+        app:layout_constraintBottom_toBottomOf="@+id/arrWidth_tv"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/arrow"
-        app:layout_constraintTop_toTopOf="@+id/arrow" />
+        app:layout_constraintStart_toEndOf="@+id/arrWidth_tv"
+        app:layout_constraintTop_toTopOf="@+id/arrWidth_tv" />
 
     <EditText
-        android:id="@+id/arrowhed"
+        android:id="@+id/arrHeight_et"
         android:layout_width="130dp"
         android:layout_height="45dp"
         android:layout_marginTop="10dp"
         android:background="@drawable/custom_input"
         android:hint="0"
         android:paddingStart="16dp"
-        app:layout_constraintStart_toStartOf="@+id/arrowh"
-        app:layout_constraintTop_toBottomOf="@+id/arrowh" />
+        app:layout_constraintStart_toStartOf="@+id/arrHeight_tv"
+        app:layout_constraintTop_toBottomOf="@+id/arrHeight_tv" />
 
     <Button
-        android:id="@+id/Render_btn"
+        android:id="@+id/render_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="42dp"

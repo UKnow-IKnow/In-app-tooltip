@@ -6,7 +6,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
-import androidx.navigation.NavHostController
 import androidx.navigation.fragment.findNavController
 import com.example.inapptooltip.databinding.FragmentFirstBinding
 
@@ -21,7 +20,7 @@ class FirstFragment : Fragment() {
         // Inflate the layout for this fragment
         _binding = FragmentFirstBinding.inflate(inflater, container, false)
 
-        setUpAdapter()
+
 
         return binding?.root
     }
@@ -32,8 +31,24 @@ class FirstFragment : Fragment() {
         val binding = FragmentFirstBinding.bind(view)
         _binding = binding
 
-        binding.RenderBtn.setOnClickListener {
-            findNavController().navigate(R.id.action_firstFragment_to_secondFragment)
+        setUpAdapter()
+
+        binding.apply {
+            renderBtn.setOnClickListener {
+                //passing the data
+                val direction = FirstFragmentDirections.actionFirstFragmentToSecondFragment(
+                    tooltipEt.text.toString(),
+                    sizeEt.text.toString().toInt(),
+                    paddingEt.text.toString().toInt(),
+                    colorEt.text.toString(),
+                    bgColorEt.text.toString(),
+                    radiusEt.text.toString().toInt(),
+                    ttWidthEt.text.toString().toInt(),
+                    arrWidthEt.text.toString().toInt(),
+                    arrHeightEt.text.toString().toInt()
+                )
+                findNavController().navigate(direction)
+            }
         }
     }
 

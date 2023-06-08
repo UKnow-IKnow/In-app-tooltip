@@ -1,12 +1,11 @@
 package com.example.inapptooltip
 
-import android.graphics.Color
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.example.inapptooltip.databinding.FragmentFirstBinding
+import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.navArgs
 import com.example.inapptooltip.databinding.FragmentSecondBinding
 import com.example.tool_tip.Tooltip
 import com.example.tool_tip.utils.Position
@@ -16,6 +15,12 @@ class SecondFragment : Fragment() {
 
     private var _binding: FragmentSecondBinding? = null
     private val binding get() = _binding
+
+    private val args : SecondFragmentArgs by  navArgs()
+
+    private var tooltip: Tooltip? = null
+    private var showToolTip = false
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -31,21 +36,38 @@ class SecondFragment : Fragment() {
         val binding = FragmentSecondBinding.bind(view)
         _binding = binding
 
-        binding.button3.setOnClickListener {
-            Tooltip.on(binding.button3)
-                .text("This is what you want")
+        //getting the data
+        val ttText = args.tooltipText
+        val textSize = args.textSize.toFloat()
+        val padding = args.padding.toFloat()
+        val textColor = args.textColor
+        val bgColor = args.bgColor
+        val radius = args.cRadius
+        val ttWidth = args.ttWidth
+        val arrWidth = args.arrWidth
+        val arrHeight = args.arrHeight
 
-                .minHeight(30)
-                .minWidth(70)
-                .iconStart(android.R.drawable.ic_dialog_info)
-                .iconStartSize(30, 30)
-                .color(resources.getColor(R.color.purple_200))
-                .border(Color.BLACK, 1f)
-                .clickToHide(true)
-                .corner(15)
-                .position(Position.END)
-                .arrowSize(30,30)
-                .show(3000)
+
+        //render tooltip
+        if (!showToolTip){
+            binding.button3.postDelayed(
+                {
+                    Tooltip.on(binding.button3)
+                        .text(ttText)
+                        .textSize(textSize)
+                        .minHeight(30)
+                        .minWidth(ttWidth)
+                        .iconStart(android.R.drawable.ic_dialog_info)
+                        .iconStartSize(30, 30)
+                        .color(resources.getColor(R.color.black))
+                        .clickToHide(true)
+                        .corner(radius)
+                        .position(Position.END)
+                        .arrowSize(arrHeight,arrWidth)
+                        .show(3000)
+                    showToolTip = true
+                },1000
+            )
         }
     }
 }

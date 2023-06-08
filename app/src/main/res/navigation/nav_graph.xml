@@ -18,5 +18,33 @@
         android:id="@+id/secondFragment"
         android:name="com.example.inapptooltip.SecondFragment"
         android:label="fragment_second"
-        tools:layout="@layout/fragment_second" />
+        tools:layout="@layout/fragment_second" >
+        <argument
+            android:name="tooltipText"
+            app:argType="string" />
+        <argument
+            android:name="textSize"
+            app:argType="integer" />
+        <argument
+            android:name="padding"
+            app:argType="integer" />
+        <argument
+            android:name="textColor"
+            app:argType="string" />
+        <argument
+            android:name="bgColor"
+            app:argType="string" />
+        <argument
+            android:name="cRadius"
+            app:argType="integer" />
+        <argument
+            android:name="ttWidth"
+            app:argType="integer" />
+        <argument
+            android:name="arrWidth"
+            app:argType="integer" />
+        <argument
+            android:name="arrHeight"
+            app:argType="integer" />
+    </fragment>
 </navigation>
